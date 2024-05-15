@@ -104,9 +104,20 @@ export default function Vista1() {
               <section className="contenido-principal">
                 {
                   <section className="contenido-principal2"> 
-                  <Mainbg />
-                  <Navbar_ />
-                    <h1 className=" text-center font-bold text-4xl mt-8 text-white ">The recommendation tool to generate and virtually test polymers</h1>
+                  <div
+                       style={{
+                       backgroundImage: `url(${logo})`,
+                       backgroundSize: 'cover',
+                       backgroundPosition: 'center',
+                       height: '90vh',
+                      width: '100vw'
+                              }}
+                  ></div>
+                  <div className="absolute" style={{top: 0}}>
+                    <Navbar_ />
+                  </div>
+                  
+                    <h1 className=" text-center absolute font-bold text-4xl mt-8 text-white " >The recommendation tool to generate and virtually test polymers</h1>
                     <div id = "containers">
                         <div className=" m-12 gap-8 mt-0">
                             <div className="contenido absolute gap-8  top-60 " >
@@ -126,7 +137,7 @@ export default function Vista1() {
                               </a>
                               </div>
                               </div>
-                            <div className="container2 absolute ml-96 mt-20  top--2" style={{top: 159, left: 100,}}>
+                            <div className="container2 absolute ml-96 mr-96 mt-20  top--2">
                           <Container></Container>   
                           <div className="CText absolute z-10 top-0">
                               <a href="/search_polymers" target="_blank" rel="noopener noreferrer">
@@ -140,7 +151,7 @@ export default function Vista1() {
                               </a>
                               </div>               
                         </div>
-                        <div className="container3 absolute mr-10 ml-96 mt-20 top--2 " style={{top: 159, left: 530,}}>
+                        <div className="container3 absolute mr-10 ml-96 mt-20 top--2 ">
                           <Container></Container>
                           <div className="CText absolute z-10 top-0">
                               <a href="/find_polymers" target="_blank" rel="noopener noreferrer">
