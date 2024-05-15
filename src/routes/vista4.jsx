@@ -1,11 +1,20 @@
+export default function Vista1() {
+
+
+    return (
+        <h1>ae</h1>
+  )
+}
+/* 
 import React, { useState } from 'react';
 import Background1 from '../../components/BackgroundSearch';
 import Navbar_ from '../../components/nbar';
 import Search from '../../components/Search';
+*/
 
 
-export default function Vista1() {
-    const [isMobile, setIsMobile] = useState(false);
+/*  
+const [isMobile, setIsMobile] = useState(false);
 
     const handleResize = () => {
       if (window.innerWidth < 768) {
@@ -19,8 +28,14 @@ export default function Vista1() {
 
     console.log('isMobile:', isMobile);
 
-    return (
-        <div className={isMobile? 'obile' : ''}>
+
+*/
+
+
+
+/* 
+
+<div className={isMobile? 'obile' : ''}>
           {isMobile? (
             <section className="contenido-mb">
               {
@@ -51,5 +66,7 @@ export default function Vista1() {
             </section>
           )}
         </div>
-  )
-}
+
+
+
+*/
