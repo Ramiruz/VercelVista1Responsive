@@ -103,7 +103,7 @@ export default function Vista1() {
 
               <section className="contenido-principal">
                 {
-                  <section className="contenido-principal"> 
+                  <section className="contenido-principal2"> 
                   <Mainbg />
                   <Navbar_ />
                     <h1 className=" text-center font-bold text-4xl mt-8 text-white ">The recommendation tool to generate and virtually test polymers</h1>
