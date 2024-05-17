@@ -7,177 +7,51 @@ import logo from '../assets/Bg.png'; // Importa la imagen aquí
 
 
 export default function Vista1() {
-      const [isMobile, setIsMobile] = useState(false);
+  return (
+    <section className="contenido-principal bg-b min-h-dvh" style={{
+      backgroundImage: `url(${logo})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
+      <Navbar_ />
 
-      const handleResize = () => {
-        if (window.innerWidth < 768) {
-          setIsMobile(true);
-        } else {
-          setIsMobile(false);
-        }
-      };
+      <div className="container w-full mx-auto min-h-[calc(100dvh_-_80px)] p-5">
+        <h1 className=" text-center font-bold text-4xl mt-8 text-white " >The recommendation tool to generate and virtually test polymers</h1>
+        <div className="w-full flex flex-col md:flex-row gap-20 mt-20 justify-center py-10">
 
-      window.addEventListener('resize', handleResize);
+          <a href="/mix_polymers">
+            <div className="bg-white p-6 flex flex-col gap-4 h-96 shadow-lg relative pt-16 rounded-lg">
+              <div className="size-24 absolute right-1/2 translate-x-1/2 top-[-48px] p-2 rounded-full bg-white shadow-md shadow-sky-700">
+                <img src={"/flask.png"} alt="" className="p-1" />
+              </div>
+              <h3 className="text-4xl font-weight text-center text-blue-400 font-bold ">Mix Polymers</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu tortor nec lacus consectetur euismod in non ante.</p>
+            </div>
+          </a>
 
-      console.log('isMobile:', isMobile);
+          <a href="/search_polymers">
+            <div className="bg-white p-6 flex flex-col gap-4 h-96 shadow-lg relative pt-16 rounded-lg">
+              <div className="size-24 absolute right-1/2 translate-x-1/2 top-[-48px] p-2 rounded-full bg-white shadow-md shadow-sky-700">
+                <img src={"/glass.png"} alt="" className="p-1" />
+              </div>
+              <h3 className="text-4xl font-weight text-center text-blue-400 font-bold ">Search For Polymers</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
+                tortor nec lacus consectetur euismod in non ante.</p>
+            </div>
+          </a>
 
-      return (
-          <div className={isMobile? 'obile' : ''}>
-            {isMobile? (
-              <section className="contenido-mb">
-                {
-                  <section className="ae ">
-                    <div className="absolute">
-                      <Navbar_/>
-                    </div>
-                    <div
-                       style={{
-                       backgroundImage: `url(${logo})`,
-                       backgroundSize: 'cover',
-                       backgroundPosition: 'center',
-                       height: '100vh',
-                      width: '100vw'
-                              }}
-                  ></div>
-                  <h1 className=" text-center absolute font-bold text-xl text-white " style={{top: 140}}>
-                    The recommendation tool to generate and virtually test polymers</h1>
-
-                <div className="Contenedor1 absolute left-20" style={{top: 240}}>
-                  <Container/>
-                <div className="CText absolute z-10 top-0">
-                              <a href="/mix_polymers" target="_blank" rel="noopener noreferrer">
-                                <div className="logo absolute w-20 ml-20" style={{top: '-35px'}}>
-                                  <img src={"/flask.png"} className= "rounded-full  dark: shadow-lg" alt="Logo" />
-                                 </div>
-                              
-                              <h2 className=" text-3xl text-center font-weight mt-10 text-blue-500">Mix Polymers</h2>
-                              <p className="text-left ml-3 font-weight text-l"> 
-                                <p>ㅤ</p> 
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
-                              tortor nec lacus consectetur euismod in non ante.
-                              </p>
-                              </a>
-                  </div>
-                  </div>
-                  
-                  <div className="Contenedor2 absolute left-20" style={{top: 520}}>
-                  <Container/>
-                <div className="CText absolute z-10 top-0">
-                              <a href="/search_polymers" target="_blank" rel="noopener noreferrer">
-                                <div className="logo absolute w-20 ml-20" style={{top: '-35px'}}>
-                                  <img src={"/glass.png"} className= "rounded-full  dark: shadow-lg" alt="Logo" />
-                                 </div>
-                              
-                              <h2 className=" text-3xl text-center font-weight mt-10 text-blue-500">Search Polymers</h2>
-                              <p className="text-left  ml-3 font-weight"> 
-                                <p>ㅤ</p> 
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
-                              tortor nec lacus consectetur euismod in non ante.
-                              </p>
-                              </a>
-                  </div>
-                  </div>
-
-                  <div className="Contenedor3 absolute left-20" style={{top: 800}}>
-                  <Container/>
-                <div className="CText absolute z-10 top-0">
-                              <a href="/mix_polymers" target="_blank" rel="noopener noreferrer">
-                                <div className="logo absolute w-20 ml-20" style={{top: '-35px'}}>
-                                  <img src={"/right.png"} className= "rounded-full  dark: shadow-lg" alt="Logo" />
-                                 </div>
-                              
-                              <h2 className=" text-3xl text-center font-weight mt-10 text-blue-500">Find Polymers</h2>
-                              <p className="text-left ml-3 font-weight text-l"> 
-                                <p>ㅤ</p> 
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
-                              tortor nec lacus consectetur euismod in non ante.
-                              </p>
-                              </a>
-                  </div>
-                  </div>
-
-                  </section>
-                }
-              </section>
-            ) : (
-
-              <section className="contenido-principal">
-                {
-                  <section className="contenido-principal2"> 
-                  <div
-                       style={{
-                       backgroundImage: `url(${logo})`,
-                       backgroundSize: 'cover',
-                       backgroundPosition: 'center',
-                       height: '90vh',
-                      width: '100vw'
-                              }}
-                  ></div>
-                  <div className="absolute" style={{top: 0}}>
-                    <Navbar_ />
-                  </div>
-                  
-                    <h1 className=" text-center absolute font-bold text-4xl mt-8 text-white " >The recommendation tool to generate and virtually test polymers</h1>
-                    <div id = "containers">
-                        <div className=" m-12 gap-8 mt-0">
-                            <div className="contenido absolute gap-8  top-60 " >
-                              <Container></Container>
-                              <div className="CText absolute z-10 top-0">
-                              <a href="/mix_polymers" target="_blank" rel="noopener noreferrer">
-                                <div className="logo absolute w-20 ml-40" style={{top: '-35px'}}>
-                                  <img src={"/flask.png"} className= "rounded-full  dark: shadow-lg" alt="Logo" />
-                                 </div>
-                              
-                              <h2 className=" text-4xl text-center font-weight mt-10 text-blue-500">Mix Polymers</h2>
-                              <p className="text-left ml-3 font-weight text-xl"> 
-                                <p>ㅤ</p> 
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
-                              tortor nec lacus consectetur euismod in non ante.
-                              </p>
-                              </a>
-                              </div>
-                              </div>
-                            <div className="container2 absolute ml-96 mr-96 mt-20  top--2">
-                          <Container></Container>   
-                          <div className="CText absolute z-10 top-0">
-                              <a href="/search_polymers" target="_blank" rel="noopener noreferrer">
-                                <img src={"/glass.png"} className="rounded-full logo w-20  ml-40 absolute border-black dark: shadow-lg" style={{top: '-35px'}} alt="Logo" />
-                              <h2 className=" text-4xl text-center font-weight text-blue-500 mt-10">Search for Polymers</h2>
-                              <p className="text-left ml-3 font-weight text-xl"> 
-                                <p>ㅤ</p> 
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
-                              tortor nec lacus consectetur euismod in non ante.
-                              </p>
-                              </a>
-                              </div>               
-                        </div>
-                        <div className="container3 absolute mr-10 ml-96 mt-20 top--2 ">
-                          <Container></Container>
-                          <div className="CText absolute z-10 top-0">
-                              <a href="/find_polymers" target="_blank" rel="noopener noreferrer">
-                                  <img src={"/right.png"} className="rounded-full logo w-20 absolute ml-40 border-black dark: shadow-lg" style ={{top: '-35px'}}alt="Logo" />
-                              
-                              <h2 className=" text-4xl text-center font-weight text-blue-500 mt-10">Find Polymers</h2>
-                              <p className="ae text-left ml-3 font-weight text-xl"> 
-                                <p>ㅤ</p> 
-                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
-                              tortor nec lacus consectetur euismod in non ante.
-                              </p>
-                              </a>
-                              </div>                  
-                        </div>
-                        </div>
-                        
-                    </div>
-                  </section>
-                }
-
-              </section>
-            )}
-          </div>
-    )
-  }
-
-/* 
-
-*/ 
+          <a href="/find_polymers">
+            <div className="bg-white p-6 flex flex-col gap-4 h-96 shadow-lg relative pt-16 rounded-lg">
+              <div className="size-24 absolute right-1/2 translate-x-1/2 top-[-48px] p-2 rounded-full bg-white shadow-md shadow-sky-700">
+                <img src={"/right.png"} alt="" className="p-1" />
+              </div>
+              <h3 className="text-4xl font-weight text-center text-blue-400 font-bold ">Find Polymers</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu
+                tortor nec lacus consectetur euismod in non ante.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
